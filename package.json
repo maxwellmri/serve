@@ -1,6 +1,6 @@
 {
   "name": "@maxwellmri/serve",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Super simple configless tool for serving static sites. Everything redirects to index.html",
   "main": "lib/index.js",
   "files": [
@@ -13,7 +13,7 @@
     "serve": "bin/serve"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest src",
     "prepare": "npm run babel-prepublish && npm run flow-prepublish",
     "babel-prepublish": "babel src/ -d lib",
     "flow-prepublish": "flow-copy-source src lib",
