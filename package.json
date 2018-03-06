@@ -1,0 +1,58 @@
+{
+  "name": "@maxwellmri/serve",
+  "version": "0.0.1",
+  "description": "Super simple configless tool for serving static sites. Everything redirects to index.html",
+  "main": "lib/index.js",
+  "files": [
+    "bin",
+    "lib",
+    "README.md",
+    "LICENSE.md"
+  ],
+  "bin": {
+    "serve": "bin/serve"
+  },
+  "scripts": {
+    "test": "jest",
+    "prepare": "npm run babel-prepublish && npm run flow-prepublish",
+    "babel-prepublish": "babel src/ -d lib",
+    "flow-prepublish": "flow-copy-source src lib",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxwellmri/serve.git"
+  },
+  "keywords": [
+    "serve",
+    "static",
+    "http"
+  ],
+  "author": "Matthew Brown <matt@maxwellmri.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maxwellmri/serve/issues"
+  },
+  "homepage": "https://github.com/maxwellmri/serve#readme",
+  "devDependencies": {
+    "babel-cli": "6.18.0",
+    "babel-core": "^6.21.0",
+    "babel-eslint": "7.1.1",
+    "babel-jest": "^22.4.1",
+    "babel-plugin-transform-flow-strip-types": "6.21.0",
+    "babel-plugin-transform-object-rest-spread": "6.20.2",
+    "babel-preset-es2015": "6.18.0",
+    "eslint": "3.12.2",
+    "eslint-config-standard": "6.2.1",
+    "eslint-plugin-promise": "3.4.0",
+    "eslint-plugin-standard": "2.0.1",
+    "flow-bin": "0.37.4",
+    "flow-copy-source": "1.1.0",
+    "jest": "^22.4.2"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-history-api-fallback": "^2.2.1",
+    "minimist": "^1.2.0"
+  }
+}
